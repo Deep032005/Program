@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%; width: 100%; margin: 0; padding: 0;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="searchForm" onsubmit="return validateForm()">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="q" placeholder="Enter search term..." required>
+
+    <fieldset>
+        <legend>Filters:</legend>
+        <div class="radio-options main-filter">
+            <label>
+                <input type="radio" name="main_filter" value="customer">
+                Customer
+            </label>
+            <label>
+                <input type="radio" name="main_filter" value="trip">
+                Trip
+            </label>
+        </div>
+    </fieldset>
+
+    <button type="submit">Search</button>
+</form>
+
+<div id="dataContainer">
+    <div id="dataScrollContainer">
+        <table id="resultsTable">
+            <thead id="tableHeader">
+                <!-- Initial Headers -->
+                <tr>
+                    <th>Name</th>
+                    <th>Phone No</th>
+                    <th>Email</th>
+                    <th>Trip Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody id="dataBody">
+                <!-- Initial Data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div id="notFound" class="not-found" style="display: none;">Not Found</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
